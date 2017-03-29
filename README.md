@@ -18,7 +18,7 @@ The files were read using an OCR system and contained HTML tags all over the pla
 
 6- Remove all stop words
 
-7- Remove high frequency words ( Words with %75+ occurance rate in all books )
+7- Remove high frequency words ( Words with 75%+ occurance rate in all books )
 
 ## Document Similarity
 
@@ -28,7 +28,7 @@ After cleaning the data, next step is to find the document similarity matrix and
 
 ## Clustering and Dimensionality Reduction
 
-After obtaining similarity matrix and sparse vectoral form documents from TF-IDF, we started applying clustering techniques and used dimensionality reduction techniques to be able to visualise it in 2D.
+After obtaining similarity matrix and sparse vectors of documents from TF-IDF, we started applying clustering techniques and used dimensionality reduction techniques to be able to visualise it in 2D.
 
 
 ### K-Means and Principle Component Analysis
