@@ -1,0 +1,21 @@
+[(0, '0.006*"lib" + 0.005*"herod" + 0.004*"jerusalem" + 0.004*"josephu" + 0.004*"justinian"'),
+^ herod the great, Flavius Josephus, Justinian
+Work of Flavius Josephus
+
+ (1, '0.004*"fuch" + 0.004*"sulla" + 0.004*"livi" + 0.003*"fhould" + 0.003*"againft"'),
+sulla ( roman consul), Titus Livius
+Livy and Roman History
+
+
+ (2, '0.005*"strab" + 0.004*"ptol" + 0.004*"site" + 0.004*"plin" + 0.002*"stadia"'),
+Ptolemy, greek states plin ( Plinius Secundus  )
+Greek Geography
+
+
+ (3, '0.004*"peloponnesian" + 0.002*"lacedaemonian" + 0.002*"sed" + 0.002*"non" + 0.002*"hath"'),
+peloponnesian, Lacedaemonian ( state of pelopon)
+Peloponnesian War
+
+ (4, '0.004*"christian" + 0.003*"otho" + 0.003*"galba" + 0.003*"august" + 0.002*"vitelliu"')]
+Ceasar, Vitellius, Galba, otho  - 
+History of decline of rome
