@@ -6,7 +6,7 @@ from collections import defaultdict
 from nltk.stem.porter import PorterStemmer
 
 
-directory = '..//data//cleaned//'
+directory = '../data/cleaned_data/'
 
 
 def read_authors_book_names():
@@ -16,7 +16,7 @@ def read_authors_book_names():
             line_str = line.strip()
             authors.append(line_str)
     f.close()
-    
+
     with open(directory + 'books.txt', "r") as f:
         books = []
         for line in f:
@@ -33,7 +33,7 @@ def write_list_to_file(file_name, content):
             f.write(' ')
         f.write('\n')
     f.close()
-   
+
 
 def read_from_cleaned_file(file_name):
     with open(directory + file_name, "r") as f:
@@ -46,8 +46,8 @@ def read_from_cleaned_file(file_name):
             content_as_str.append(line_str)
     f.close()
     return (content_as_list, content_as_str)
-    
-    
+
+
 def read_word_list(file_name):
     word_list = []
     with open(directory + file_name, "r") as f:
@@ -58,8 +58,8 @@ def read_word_list(file_name):
             content_as_str.append(line_str)
     f.close()
     return (content_as_list, content_as_str)
-    
-    
+
+
 class MyHTMLParser(HTMLParser):  # To parse html files
     html_plain_document = []
     def handle_data(self, data):  # For every html data
@@ -70,7 +70,7 @@ def get_file_names(data_folder):
     """
     Creates a list of list containing folder and file names
 
-    Param_1: Data folder name as string 
+    Param_1: Data folder name as string
     Output_1: List of lists containng folder and file names
     """
     folder_list = glob.glob(data_folder+"*")  # Get folder and file names names in a list
@@ -137,7 +137,7 @@ def clean_list(list_to_clean):
 def remove_frequent_items(book_word_list, percentage):
     """
     Remove frequently occured words
-    
+
     Param_1: List of list containing strings
     Param_2: Above x percentage of occurance will be removed
     Output_1: Cleaned list
@@ -156,7 +156,7 @@ def remove_frequent_items(book_word_list, percentage):
         freq_items_removed_book_word_list.append(freq_items_removed_list)
     return freq_items_removed_book_word_list
 
-    
+
 def convert_list(content):
     converted_content = []
     for index, str_list in enumerate(content):

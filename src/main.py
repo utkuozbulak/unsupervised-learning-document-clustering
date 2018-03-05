@@ -20,15 +20,15 @@ if __name__ == "__main__":
 
     # Read from cleaned file, not htmls
     (cleaned_content_as_list, cleaned_content_as_str) = \
-    read_from_cleaned_file('cleaned_content.txt')
+        read_from_cleaned_file('cleaned_content.txt')
     (frequent_words_removed_content_as_list, frequent_words_removed_content_as_str) = \
-    read_from_cleaned_file('freq_words_removed_content.txt')
+        read_from_cleaned_file('freq_words_removed_content.txt')
     (book_names, authors) = read_authors_book_names()
 
     (similarity_matrix, tfidf_matrix) = get_similarity_matrix(frequent_words_removed_content_as_str)
 
     km_clusters = get_cluster_kmeans(tfidf_matrix, 5)  # KMeans
-    x_pos, y_pos = pca_reduction(similarity_matrix, 10) 
+    x_pos, y_pos = pca_reduction(similarity_matrix, 10)
     scatter_clusters(x_pos, y_pos, km_clusters, authors) # Scatter K-means with PCA
 
     dbscan_clusters = get_dbscan_cluster(tfidf_matrix, 1.2)
